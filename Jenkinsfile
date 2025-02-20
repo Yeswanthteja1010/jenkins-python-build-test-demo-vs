@@ -15,6 +15,7 @@ pipeline {
         }
         stage('Test') {
             steps {
+                sh 'pip install pytest'  // Add this line to install pytest
                 sh 'python3 -m pytest'
             }
         }
